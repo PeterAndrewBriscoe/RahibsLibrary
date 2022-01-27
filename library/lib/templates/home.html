@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to the Library Old Bean!</h1>
+    Here are all of the books!
+    <ul id="books-container">
+        {% for book in books %}
+            <li>
+                <a href="{% url 'book-show' id=book.id %}">
+                    {{ book.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+   
+
+{% endblock content %}
